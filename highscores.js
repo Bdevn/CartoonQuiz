@@ -7,4 +7,3 @@ highScoresList.innerHTML = highScores
   })
   .join("");
 
-  location.assign("https://bdevn.github.io/CartoonQuiz/end.html");
