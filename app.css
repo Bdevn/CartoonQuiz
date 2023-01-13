@@ -82,6 +82,11 @@ h3 {
   display: none;
 }
 
+/* Bunny Image */
+img {
+  z-index: 1;
+}
+
 /* BUTTONS */
 .btn {
   font-size: 1.8rem;
