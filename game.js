@@ -22,7 +22,8 @@ fetch(
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
-                question: loadedQuestion.question,
+            question: loadedQuestion.question;
+            startGame();
             };
 
             const answerChoices = [...loadedQuestion.incorrect_answers];
@@ -57,8 +58,6 @@ startGame = () => {
     game.classList.remove('hidden');
     loader.classList.add('hidden');
 };
-
-startGame();
 
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
