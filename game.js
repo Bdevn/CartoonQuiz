@@ -113,6 +113,4 @@ incrementScore = (num) => {
     scoreText.innerText = score;
 };
 
-fetch(
-    'https://bdevn.github.io/CartoonQuiz/end.html'
-)
+
