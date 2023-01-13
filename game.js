@@ -42,7 +42,7 @@ fetch(
 
         // startGame();
         fetch(
-            'https://bdevn.github.io/CartoonQuiz/'
+            'https://bdevn.github.io/CartoonQuiz/end.html'
         )
     })
     .catch((err) => {
