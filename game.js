@@ -38,17 +38,17 @@ fetch(
             });
 
             return formattedQuestion;
-        });
+        }),
 
-        return formattedQuestion;
+        return: formattedQuestion,
         
-    });
+    },;
 
         startGame();
     })
     .catch((err => {
         console.error(err);
-    });
+    }))
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
@@ -114,5 +114,4 @@ choices.forEach((choice) => {
 incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
-};
-
+}
