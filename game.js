@@ -14,28 +14,24 @@ let availableQuesions = [];
 let questions = [];
 
 fetch(
-    'https://opentdb.com/api.php?amount=3&category=32&type=multiple'
+    'https://opentdb.com/api.php?amount=10&category=32&difficulty=medium&type=multiple'
 )
     .then((res) => {
         return res.json();
     })
-    .then((loadedQuestions) => {
-        questions = loadedQuestions.results.map((loadedQuestion) => {
+    .then(loadedQuestions => {
+        console.log(loadedQuestions.results);
+        questions = loadedQuestions.results.map(loadedQuestion => {
             const formattedQuestion = {
-            question: loadedQuestion.question,
-            startGame();
+                question: loadedQuestions.results.map( loadedQuestion => {
+                    const formattedquestion = {
+            question: loadedQuestion.question
             };
-            .catch(err => {
-                console.error(err);
-            })
 
             const answerChoices = [...loadedQuestion.incorrect_answers];
-            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
-            answerChoices.splice(
-                formattedQuestion.answer - 1,
-                0,
-                loadedQuestion.correct_answer
-            );
+            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+            answerChoices.splice(formattedQuestion.answer - 1, 0,
+            loadedQuestion.correct_answer);
 
             answerChoices.forEach((choice, index) => {
                 formattedQuestion['choice' + (index + 1)] = choice;
@@ -44,8 +40,13 @@ fetch(
             return formattedQuestion;
         });
 
+        return formattedQuestion;
+        
+    });
+
+        startGame();
     })
-    .catch((err) => {
+    .catch((err => {
         console.error(err);
     });
 
@@ -113,7 +114,5 @@ choices.forEach((choice) => {
 incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
-
 };
 
-startGame();
