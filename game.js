@@ -40,7 +40,7 @@ fetch(
             return formattedQuestion;
         });
 
-        startGame();
+        // startGame();
     })
     .catch((err) => {
         console.error(err);
