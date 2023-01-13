@@ -6,3 +6,5 @@ highScoresList.innerHTML = highScores
     return `<li class="high-score">${score.name} - ${score.score}</li>`;
   })
   .join("");
+
+  location.assign("https://bdevn.github.io/CartoonQuiz/end.html");
