@@ -111,8 +111,8 @@ choices.forEach((choice) => {
 incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
-};
 
-location.assign("https://bdevn.github.io/CartoonQuiz/end.html");
+    location.assign("https://bdevn.github.io/CartoonQuiz/end.html");
+};
 
 
