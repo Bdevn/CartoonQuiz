@@ -40,10 +40,8 @@ fetch(
             return formattedQuestion;
         });
 
-        // startGame();
-        fetch(
-            'https://bdevn.github.io/CartoonQuiz/end.html'
-        )
+        startGame();
+               
     })
     .catch((err) => {
         console.error(err);
