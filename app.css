@@ -84,6 +84,7 @@ h3 {
 
 /* Bunny Image */
 img {
+  background-image: url(https://github.com/Bdevn/CartoonQuiz/blob/main/images/Bunny.png);
   z-index: 1;
 }
 
