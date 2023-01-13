@@ -40,8 +40,6 @@ fetch(
             return formattedQuestion;
         });
 
-        startGame();
-
     })
     .catch((err) => {
         console.error(err);
@@ -114,4 +112,4 @@ incrementScore = (num) => {
 
 };
 
-startGame();
+// startGame();
