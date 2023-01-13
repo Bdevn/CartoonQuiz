@@ -25,6 +25,9 @@ fetch(
             question: loadedQuestion.question;
             startGame();
             };
+            .catch(err => {
+                console.error(err);
+            })
 
             const answerChoices = [...loadedQuestion.incorrect_answers];
             formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
