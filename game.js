@@ -22,7 +22,7 @@ fetch(
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
-            question: loadedQuestion.question;
+            question: loadedQuestion.question,
             startGame();
             };
             .catch(err => {
