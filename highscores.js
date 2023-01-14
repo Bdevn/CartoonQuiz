@@ -6,4 +6,4 @@ highScoresList.innerHTML = highScores.map(score => {
   }).join("");
 
   // $('username')[0].reset();
-  document.getElementById("username").reset();
+  document.getElementById("#username").reset();
